@@ -17,10 +17,10 @@ export default function Navbar() {
                         <NavLink to="/books" className="nav-link active" aria-current="page">Lista dei libri</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="about" className="nav-link">Chi siamo</NavLink>
+                        <NavLink to="/about" className="nav-link">Chi siamo</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="contact" className="nav-link">Contatti</NavLink>
+                        <NavLink to="/contact" className="nav-link">Contatti</NavLink>
                     </li>
                 </ul>
             </div>
