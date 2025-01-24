@@ -3,7 +3,7 @@ import { createContext } from "react";
 import axios from "axios";
 import { use } from "react";
 
-const GlobalContext = createContext();  //creo il Context e gli do il nome GlobalContext
+const GlobalContext = createContext();  //crea il Context e gli do il nome GlobalContext
 
 // Creo il provider customizzato:
 const GlobalProvider = ({ children }) => {
