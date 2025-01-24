@@ -21,7 +21,8 @@ const GlobalProvider = ({ children }) => {
     function getBooks() {
         axios.get(apiUrl + "/books")
             .then((res) => {
-                setBooks(res.data.results);
+                console.log(res.data);
+                setBooks(res.data.items);
             })
             .catch((err) => {
                 console.log(err);
@@ -33,7 +34,7 @@ const GlobalProvider = ({ children }) => {
 
     // Oggetto contenente i dati da passare al value per offrirli ai Consumer (i componenti racchiusi nel Provider di GLobalContext):
     const collectionData = {
-        books,
+        books
     }
 
     return (
