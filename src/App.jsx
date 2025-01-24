@@ -8,13 +8,13 @@ import Books from "./pages/Books.jsx"
 import Details from "./pages/Details.jsx"
 
 import Header from "./components/Header"
+import { GlobalProvider } from "./contexts/GlobalContext.jsx"
 
 
 function App() {
 
   return (
-    
-
+    <GlobalProvider>
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout} >
@@ -28,9 +28,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-
-
- 
+    </GlobalProvider>
   )
 }
 
