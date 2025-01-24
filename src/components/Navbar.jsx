@@ -11,7 +11,7 @@ export default function Navbar() {
                     <li>
                         <NavLink to="/" className="nav-link" style={({ isActive }) => {
                             return isActive ? { color: "red" } : {}
-                        }} end><h5>Bool Book</h5></NavLink>
+                        }} end><h5>Bool Books</h5></NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/books" className="nav-link active" aria-current="page" style={({ isActive }) => {
