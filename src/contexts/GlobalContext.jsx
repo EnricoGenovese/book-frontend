@@ -1,19 +1,47 @@
 // Creazione della GlobalContext che conterrà tutte le chiamate API al server
-import { createContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { use } from "react";
+
+//Api url e endpoint per axios
+const apiUrl = import.meta.env.VITE_APIURL;
 
 const GlobalContext = createContext();  //crea il Context e gli do il nome GlobalContext
 
 // Creo il provider customizzato:
 const GlobalProvider = ({ children }) => {
+    // useState dei book:
+    const [books, setBooks] = useState([]);
+
+
+    /* Configuro lo useEffect per chiamare l'API per i film popolari solo al caricamento della pagina: */
+    useEffect(() => {
+        getBooks();
+    }, []);
+
+    function getBooks() {
+        axios.get(apiUrl + "/books")
+            .then((res) => {
+                setBooks(res.data.results);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => {
+                console.log("Finito: ", books);
+            });
+    }
+
+    // Oggetto contenente i dati da passare al value per offrirli ai Consumer (i componenti racchiusi nel Provider di GLobalContext):
+    const collectionData = {
+        books,
+    }
+
+    return (
+        <GlobalContext.Provider value={collectionData}>
+            {children}
+        </GlobalContext.Provider>
+    );
 }
-
-// Oggetto contenente i dati da passare al value per offrirli ai Consumer (i componenti racchiusi nel Provider di GLobalContext):
-const collectionData = {
-
-}
-
 // Creo una hook personalizzata per accedere al Context:
 function useGlobalContext() {
     const context = useContext(GlobalContext);
