@@ -11,7 +11,8 @@ const GlobalContext = createContext();  //crea il Context e gli do il nome Globa
 const GlobalProvider = ({ children }) => {
     // useState dei book:
     const [books, setBooks] = useState([]);
-
+    // useState del singolo book:
+    const [singleBook, setSingleBook] = useState();
 
     /* Configuro lo useEffect per chiamare l'API per i film popolari solo al caricamento della pagina: */
     useEffect(() => {
@@ -21,7 +22,7 @@ const GlobalProvider = ({ children }) => {
     function getBooks() {
         axios.get(apiUrl + "/books")
             .then((res) => {
-                console.log(res.data);
+                console.log(res.data.items);
                 setBooks(res.data.items);
             })
             .catch((err) => {
@@ -32,9 +33,28 @@ const GlobalProvider = ({ children }) => {
             });
     }
 
+    function getSingleBook(id) {
+        axios.get(apiUrl + "/books/" + id)
+            .then((res) => {
+                console.log("Scheda libro intero: ", res.data);
+                setSingleBook(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => {
+                console.log("Finito libri");
+                console.log("singleMovie: ", singleBook);
+
+            });
+    }
+
     // Oggetto contenente i dati da passare al value per offrirli ai Consumer (i componenti racchiusi nel Provider di GLobalContext):
     const collectionData = {
-        books
+        books,
+        setBooks,
+        singleBook, 
+        getSingleBook,
     }
 
     return (

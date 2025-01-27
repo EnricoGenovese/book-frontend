@@ -8,6 +8,7 @@ import About from "./pages/About.jsx"
 import Contacts from "./pages/Contacts.jsx"
 import Books from "./pages/Books.jsx"
 import Details from "./pages/Details.jsx"
+import NotFoundPage from "./pages/NotFoundPage.jsx"
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
               <Route path=":id" Component={Details} />
             </Route>
           </Route>
+          {/* Rotta per le pagine non trovate: inserendo path="*" */}
+          <Route path="*" Component={NotFoundPage} />
         </Routes>
       </BrowserRouter>
     </GlobalProvider>
