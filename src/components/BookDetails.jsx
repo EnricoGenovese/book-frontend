@@ -1,4 +1,5 @@
 // Hook usato per accedere a rotte dinamiche (consente di estrarre i parametri dalla URL, in questo caso mi serve il parametro dell'id):
+
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -6,6 +7,7 @@ import Star from "./Star";
 import Loader from "./Loader";
 // Importo il CSS Modules di BooksDetails
 import style from "./BookDetails.module.css"
+import ReviewForm from "./ReviewForm";
 
 export default function BookDetails({ dataBooks }) {
     const { id } = useParams();     //Destrutturo useParames e ricavo l'id
@@ -43,6 +45,9 @@ export default function BookDetails({ dataBooks }) {
                                 </div>
                             </div>
                         ))}
+                    </section>
+                    <section>
+                        <ReviewForm />
                     </section>
                 </>
                 : <Loader />
