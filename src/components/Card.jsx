@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 
 function Card({ data }) {
-    const imgPath = "http://localhost:3000/img/books" + data.image;
+    const imgPath = "http://localhost:3000/img/" + data.image;
     // Destrutturo data così da usare direttamente le variabili destrutturate. Es: title invece di data.title
     const { title, author, abstract, id } = data;
     return (
