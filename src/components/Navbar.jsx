@@ -35,7 +35,7 @@ export default function Navbar() {
                                 style={({ isActive }) => (isActive ? { color: "red" } : {})}
                                 end
                             >
-                                Lista dei posts
+                                Lista dei libri
                             </NavLink>
                         </li>
                         <li className="nav-item">
