@@ -12,22 +12,12 @@ import ReviewForm from "./ReviewForm";
 export default function BookDetails({ dataBooks }) {
     const { id } = useParams();     //Destrutturo useParames e ricavo l'id
     const { isLoading } = useGlobalContext();   // Destrutturo per ricavarmi la variabile di stato isLoading
-    console.log("dataBooks: ", dataBooks);
-=======
-
-
-export default function BookDetails({ dataBooks }) {
-    const { id } = useParams(); // Ricavo l'id dalla URL
     const imgPath = "http://localhost:3000/img/";
-
-    // Resetta lo scroll ogni volta che cambia l'id del libro
-    useEffect(() => {
-        window.scrollTo(0, 0); // Porta la scrollbar in cima
-    }, ["books/:id"]); // L'effetto viene eseguito ogni volta che cambia il parametro `id`
-
+    
+    console.log("dataBooks: ", dataBooks);
     return (
         <>
-            {dataBooks ? (
+            {dataBooks ?
                 <>
                     <div className="col-12 col-md-6 col-lg-4" key={id}>
                         <div className="d-flex mb-5">
@@ -72,13 +62,9 @@ export default function BookDetails({ dataBooks }) {
                     </section>
                 </>
 
-                : isLoading && <Loader/>
+                : isLoading && <Loader />
             }
-=======
-            ) : (
-                <Loader />
-            )}
-
         </>
     );
 }
+
