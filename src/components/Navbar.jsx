@@ -9,13 +9,13 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light h-100">
-            <div className="container-fluid">
-                <NavLink to="/" className="navbar-brand">
+        <nav className="navbar navbar-expand-lg navbar-light h-100 p-0">
+            <div className="container-fluid g-0">
+                <NavLink to="/" className="navbar-brand ms-3 ">
                     <img style={{ width: "40px", height: "40px", borderRadius: "50px" }} src="https://www.quattroerre.it/wp-content/uploads/2019/10/lettera-s-olografica-oro.jpg" alt="" />
                 </NavLink>
                 <button
-                    className="navbar-toggler"
+                    className="navbar-toggler me-3"
                     type="button"
                     aria-expanded={isOpen}
                     aria-label="Toggle navigation"
@@ -24,15 +24,15 @@ export default function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                    className={`collapse navbar-collapse ${isOpen ? "show hamburgo-right" : ""}`} // Aggiungi la classe "show" quando il menu è aperto
+                    className={`bg-secondary-subtle w-100 collapse navbar-collapse ${isOpen ? "show" : ""}`} // Aggiungi la classe "show" quando il menu è aperto
                     id="navbarSupportedContent"
                 >
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li className="nav-item">
                             <NavLink
                                 to="/books"
-                                className="nav-link"
-                                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                                className="nav-link text-decoration-none"
+                                style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
                                 Lista dei libri
@@ -41,18 +41,18 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 to="/about"
-                                className="nav-link"
-                                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                                className="nav-link text-decoration-none"
+                                style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
                                 Chi siamo
                             </NavLink>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                             <NavLink
                                 to="/contacts"
-                                className="nav-link"
-                                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                                className="nav-link text-decoration-none"
+                                style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
                                 Contatti

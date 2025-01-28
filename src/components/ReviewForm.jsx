@@ -29,8 +29,8 @@ function ReviewForm({ book_id }) {
     return (
         <>
             <form onSubmit={onHandleSubmit} >
-                <div className="form-group">
-                    <label htmlFor="name">Nome</label>
+                <div className="form-group mb-3">
+                    <label htmlFor="name" className="form-label">Nome</label>
                     <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Scrivi il tuo nome..." value={formData.name} onChange={onHandelInput} />
                 </div>
                 <div className="mb-3">
@@ -38,11 +38,11 @@ function ReviewForm({ book_id }) {
                     <textarea className="form-control" id="text" name="text" rows="3" value={formData.text} onChange={onHandelInput}></textarea>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="vote" className="form-label">Inserisci un numero</label>
+                    <label htmlFor="vote" className="form-label">Inserisci un voto</label>
                     <input type="number" className="form-control w-25" id="vote" name="vote" min="0" max="5" step="1" value={formData.vote} onChange={onHandelInput} />
                     <div className="form-text">Inserisci un valore compreso tra 0 e 5.</div>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn " style={{ backgroundColor: "#c6a664" }}>Invia commento</button>
             </form>
         </>
     );
