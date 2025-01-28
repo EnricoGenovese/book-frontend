@@ -1,9 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Star from "./Star";
+// Importo il GlobalContext per poter accedere alla variabile di stato  isLoading
+import { useGlobalContext } from "../contexts/GlobalContext.jsx";
+// Importo il componente Loader:
 import Loader from "./Loader";
 import style from "./BookDetails.module.css";
 import ReviewForm from "./ReviewForm";
+
+
+export default function BookDetails({ dataBooks }) {
+    const { id } = useParams();     //Destrutturo useParames e ricavo l'id
+    const { isLoading } = useGlobalContext();   // Destrutturo per ricavarmi la variabile di stato isLoading
+    console.log("dataBooks: ", dataBooks);
+=======
 
 
 export default function BookDetails({ dataBooks }) {
@@ -61,9 +71,14 @@ export default function BookDetails({ dataBooks }) {
                         <ReviewForm book_id={id} />
                     </section>
                 </>
+
+                : isLoading && <Loader/>
+            }
+=======
             ) : (
                 <Loader />
             )}
+
         </>
     );
 }
