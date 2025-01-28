@@ -110,7 +110,7 @@ footer {
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transform: rotate(9deg);
-    max-width: 450px;
+    width: 450px;
 }
 
 #homepage-text-mobile {
@@ -128,7 +128,7 @@ footer {
     z-index: 1000;
     padding: 20px;
     transform: rotate(9deg);
-    max-width: 400px;
+    width: 400px;
     text-shadow: -1px 1px 2px rgba(43, 10, 10, 0.8);
     font-size: 20px;
 
@@ -150,13 +150,13 @@ body {
 @media screen and (max-width: 1610px) {
     #homepage-text {
         top: 19%;
-        max-width: 350px;
+        width: 350px;
     }
 
     #homepage-p {
         top: 10%;
         font-size: 19px;
-        max-width: 300px
+        width: 300px
     }
 }
 
@@ -164,13 +164,13 @@ body {
     #homepage-text {
         top: 10%;
         font-size: 24px;
-        max-width: 300px
+        width: 300px
     }
 
     #homepage-p {
         top: 5%;
         font-size: 19px;
-        max-width: 300px
+        width: 300px
     }
 }
 
@@ -178,37 +178,42 @@ body {
     #homepage-text {
         top: 5%;
         font-size: 20px;
-        max-width: 200px
+        width: 200px
     }
 
     #homepage-p {
-        top: -5%;
-        left: 49%;
+        top: -25px;
+        left: 48.5%;
         font-size: 16px;
-        max-width: 200px
+        width: 200px
     }
 }
 
 @media screen and (max-width: 880px) {
     #homepage-text {
-        top: 1%;
-        left: 60%;
+        top: 5px;
+        left: 53%;
         font-size: 14px;
-        max-width: 150px
+        width: 150px
     }
 
     #homepage-p {
-        left: 56%;
+        top: -10%;
+        left: 49.5%;
     }
 }
 
-@media screen and (max-width: 800px) {
-    #homepage-text {
-        display: none;
+@media screen and (max-width: 790px) {
+#homepage-text {
+        top: -45px;
+        left: 190px;
+        font-size: 14px;
+        width: 150px
     }
 
     #homepage-p {
-        display: none;
+        top: -50px;
+        left: 158px;
     }
 }
 

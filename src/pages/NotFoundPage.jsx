@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function NotFoundPage() {
     return (
         <>
-            <Navbar />
-            <h1>Pagina non trovata! Torna alla <i><Link to="/">Homepage!</Link></i></h1>
+            <h1 id="homepage-text">Errore 404</h1>
+            <p className="pt-sm-5" id="homepage-p">Pagina non trovata, torna alla <i><Link to="/">Homepage!</Link></i></p>
         </>
     );
 }
