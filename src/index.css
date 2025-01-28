@@ -95,28 +95,32 @@ footer {
 
 #homepage-text {
     color: #212529;
-    position: absolute;
-    top: 35%;
+    position: relative;
+    top: 26%;
     left: 52%;
-    margin: 0 auto;
-    text-align: center;
     z-index: 1000;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transform: rotate(9deg);
+    max-width: 450px;
+}
+
+#homepage-text-mobile {
+    display: none;
+    padding: 30px;
+    padding: 30px;
+    color: #212529;
 }
 
 #homepage-p {
     color: #212529;
-    position: absolute;
-    top: 48%;
+    position: relative;
+    top: 20%;
     left: 50%;
-    margin: 0 auto;
-    text-align: center;
     z-index: 1000;
-    padding: 30px;
+    padding: 20px;
     transform: rotate(9deg);
-    max-width: 450px;
+    max-width: 400px;
     text-shadow: -1px 1px 2px rgba(43, 10, 10, 0.8);
     font-size: 20px;
 
@@ -134,10 +138,77 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* MEDIA QUERY PER L'HOMEPAGE */
+@media screen and (max-width: 1610px) {
+    #homepage-text {
+        top: 19%;
+        max-width: 350px;
+    }
+
+    #homepage-p {
+        top: 10%;
+        font-size: 19px;
+        max-width: 300px
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #homepage-text {
+        top: 10%;
+        font-size: 24px;
+        max-width: 300px
+    }
+
+    #homepage-p {
+        top: 5%;
+        font-size: 19px;
+        max-width: 300px
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    #homepage-text {
+        top: 5%;
+        font-size: 20px;
+        max-width: 200px
+    }
+
+    #homepage-p {
+        top: -5%;
+        left: 49%;
+        font-size: 16px;
+        max-width: 200px
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #homepage-text {
+        top: 1%;
+        left: 60%;
+        font-size: 14px;
+        max-width: 150px
+    }
+
+    #homepage-p {
+        left: 56%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #homepage-text {
+        display: none;
+    }
+
+    #homepage-p {
+        display: none;
+    }
+}
+/* FINE MEDIA QUERY PER L'HOMEPAGE */
 
 /* Importazione font da Google Fonts */
 
 /* Stile generale del corpo */
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
