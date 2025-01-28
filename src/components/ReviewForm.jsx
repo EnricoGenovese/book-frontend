@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { useParams } from "react-router";
+import { useGlobalContext } from "../contexts/GlobalContext";
 
-function ReviewForm() {
+function ReviewForm({ book_id }) {
 
-    const { id } = useParams();
-
+    const { postReview } = useGlobalContext();
     const initialForm = {
         name: "",
         text: "",
-        vote: "",
-        book_id: parseInt(id)
+        vote: ""
     };
 
     const [formData, setFormData] = useState(initialForm);
@@ -24,6 +22,7 @@ function ReviewForm() {
 
         //axios 
         console.log(formData);
+        postReview({ ...formData }, book_id);
         setFormData(initialForm);
     };
 
