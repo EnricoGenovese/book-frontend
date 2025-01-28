@@ -5,7 +5,8 @@ import { faFacebook, faGithub, faTwitter, faYoutube, faTiktok } from "@fortaweso
 export default function Footer() {
     return (
 
-        <footer className=" d-flex justify-content-between  bg-dark text-white ">
+        <footer className=" d-flex justify-content-between  bg-dark text-white px-5 ">
+
             <div className={`d-flex gap-2 align-items-center h-100 ps-1 `} >
                 <div className={`${FooterStyle.footerIMG}`}>
                     <img style={{ width: "100%", height: "100%" }} src="https://www.bookrepublic.it/media/ex_satchmo/editori/download.jpeg.200x200_q85.jpg" alt="Sellerio icon" />
@@ -28,6 +29,7 @@ export default function Footer() {
                 <li><a href="#"><FontAwesomeIcon icon={faTiktok} style={{ height: "20px", width: "20px", color: "white", paddingRight: "15px" }} /></a></li>
 
             </ul>
+
         </footer>
     )
 }
