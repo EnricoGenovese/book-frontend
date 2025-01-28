@@ -4,6 +4,7 @@ import axios from "axios";
 
 //Api url e endpoint per axios
 const apiUrl = import.meta.env.VITE_APIURL;
+const endpoint = "/books/"
 
 const GlobalContext = createContext();  //crea il Context e gli do il nome GlobalContext
 
@@ -49,12 +50,27 @@ const GlobalProvider = ({ children }) => {
             });
     }
 
+    function postReview(formData, book_id) {
+        axios.post(`${apiUrl}${endpoint}${book_id}/reviews`, formData)
+            .then((res) => {
+                console.log(`Chiamata axios: ${res}`);
+                getSingleBook(book_id);
+            }).catch((error) => {
+                console.log(error);
+
+            }).finally(() => {
+                console.log("Done");
+
+            })
+    }
+
     // Oggetto contenente i dati da passare al value per offrirli ai Consumer (i componenti racchiusi nel Provider di GLobalContext):
     const collectionData = {
         books,
         setBooks,
-        singleBook, 
+        singleBook,
         getSingleBook,
+        postReview,
     }
 
     return (

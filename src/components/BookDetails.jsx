@@ -47,7 +47,7 @@ export default function BookDetails({ dataBooks }) {
                         ))}
                     </section>
                     <section>
-                        <ReviewForm />
+                        <ReviewForm book_id={id} />
                     </section>
                 </>
                 : <Loader />
