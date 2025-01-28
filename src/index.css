@@ -8,12 +8,20 @@
     border: 1px solid red;
 }
 
+.navbar-toggler:hover {
+    background-color: #c6a664;
+}
+
+
+
 .center-cards {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 /*
 CARD DETAIL REVIEW
@@ -203,6 +211,7 @@ body {
         display: none;
     }
 }
+
 /* FINE MEDIA QUERY PER L'HOMEPAGE */
 
 /* Importazione font da Google Fonts */

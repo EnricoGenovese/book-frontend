@@ -9,11 +9,11 @@ function Star({ num }) {
         for (let i = 0; i < 5; i++) {
             // console.log("iterazione n: " + i + "del num: " + num +"del temp:" + tempN);
             if (tempN >= 1) {
-                stars.push(< FaStar key={i} className="text-warning" />);
+                stars.push(< FaStar key={i} style={{ color: "#c6a664" }} />);
             } else if (tempN >= 0.5) {
-                stars.push(< FaStarHalfAlt key={i} className="text-warning" />);
+                stars.push(< FaStarHalfAlt key={i} style={{ color: "#c6a664" }} />);
             } else {
-                stars.push(< FaRegStar key={i} className="text-warning" />);
+                stars.push(< FaRegStar key={i} style={{ color: "#c6a664" }} />);
             }
             tempN -= 1;
         }
