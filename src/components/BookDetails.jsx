@@ -12,7 +12,6 @@ import ReviewForm from "./ReviewForm";
 export default function BookDetails({ dataBooks }) {
     const { id } = useParams();     //Destrutturo useParames e ricavo l'id
     console.log("dataBooks: ", dataBooks);
-
     const imgPath = "http://localhost:3000/img/";
 
     return (
@@ -20,18 +19,22 @@ export default function BookDetails({ dataBooks }) {
             {dataBooks ?
                 <>
                     <div className="col-12 col-md-6 col-lg-4" key={id}>
-                        <div className="card" id={style.idcards}>
-                            <img className="card-img-top" src={imgPath + dataBooks.image} alt={dataBooks.title} />
-                            <div className="card-body">
-                                <h5 className="card-title">{dataBooks.title}</h5>
-                                <h5 className="card-title">{dataBooks.author}</h5>
-                                <p className="card-text">{dataBooks.abstract}</p>
-                                <Link to='/books/' className="btn btn-primary">Torna alla lista dei film</Link>
+                        <div className="d-flex mb-5">
+                            <img className="card-img-top me-5 w-50" src={imgPath + dataBooks.image} alt={dataBooks.title} />
+
+                            <div className=" d-flex flex-column justify-content-between">
+                                <div className=" card-detail-review">
+                                    <h5 className="fs-1">{dataBooks.title}</h5>
+                                    <h5 className=" text-secondary">By {dataBooks.author}</h5>
+                                    <p className="text-secondary">{dataBooks.abstract}</p>
+
+                                </div>
+                                <Link to='/books/' className="btn btn-primary w-25 small-text">Torna alla lista dei film</Link>
                             </div>
                         </div>
                     </div>
-                    <section className="py-4">
-                        <div className="py-4 d-flex justify-content-between "><h3 >Recensioni:</h3><h3 >Media voto: {<Star num={dataBooks.vote_average} />}</h3></div>
+                    <section className="">
+                        <div className=" d-flex justify-content-between "><h3 >Recensioni:</h3><h3 >Media voto: {<Star num={dataBooks.vote_average} />}</h3></div>
 
 
                         {dataBooks.reviews.map((review) => (
