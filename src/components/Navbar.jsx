@@ -12,7 +12,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
                 <NavLink to="/" className="navbar-brand">
-                    HomePage
+                    <img style={{ width: "40px", height: "40px", borderRadius: "50px" }} src="https://www.quattroerre.it/wp-content/uploads/2019/10/lettera-s-olografica-oro.jpg" alt="" />
                 </NavLink>
                 <button
                     className="navbar-toggler"
