@@ -12,7 +12,7 @@ export default function Footer() {
                 </div>
                 <div className="h-100 d-flex flex-column">
                     <div>Sellerio Editore</div>
-                    <div className={`${FooterStyle.footerInfo}d-sm-none`}>Via Enzo ed Elvira Sellerio 50, 90141 Palermo </div>
+                    <div className={`${FooterStyle.footerInfo} `}>Via Enzo ed Elvira Sellerio 50, 90141 Palermo </div>
 
                 </div>
 
