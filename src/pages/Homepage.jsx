@@ -1,5 +1,7 @@
 export default function Homepage() {
     return (
-        <h2>Home Pagepagepage</h2>
+        <section className="container">
+            <h1>Benvenuti su Boolerio</h1>
+        </section>
     )
 }
