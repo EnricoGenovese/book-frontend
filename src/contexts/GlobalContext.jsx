@@ -1,7 +1,6 @@
 // Creazione della GlobalContext che conterrà tutte le chiamate API al server
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import NotFoundPage from "../pages/NotFoundPage";
 //Api url e endpoint per axios
 const apiUrl = import.meta.env.VITE_APIURL;
 const endpoint = "/books/"
