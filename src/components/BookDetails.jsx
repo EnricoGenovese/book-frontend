@@ -12,31 +12,32 @@ export default function BookDetails({ dataBooks }) {
     const { isLoading } = useGlobalContext();   // Destrutturo per ricavarmi la variabile di stato isLoading
     const imgPath = "http://localhost:3000/img/";
 
+
     console.log("dataBooks: ", dataBooks);
     return (
         <>
             {dataBooks ?
                 <>
                     <div className="bg-book-detail">
-                        <div id="book-detail" className="col-12 col-md-6 col-lg-4" key={id}>
-                            <div className="d-flex mb-5">
-                                <img className="card-img-top me-5 w-50" src={imgPath + dataBooks.image} alt={dataBooks.title} />
-                                <div className="d-flex flex-column justify-content-between">
-                                    <div className="card-detail-review">
-                                        <h5 className="fs-1">{dataBooks.title}</h5>
-                                        <h5 className="text-secondary">By {dataBooks.author}</h5>
-                                        <p className="text-secondary">{dataBooks.abstract}</p>
-                                    </div>
-                                    {/* <Link to="/books/" className="btn btn-primary w-25 small-text">
+                        <div id="book-detail" className="" key={id}>
+                            <div className=" mb-5 d-flex flex-column flex-md-row gap-3 gap-lg-5">
+                                <img className="card-img-top card-img-details mb-3 align-self-center " src={imgPath + dataBooks.image} alt={dataBooks.title} />
+
+                                <div className=" d-flex flex-column text-center text-md-start">
+                                    <h5 className="fs-1">{dataBooks.title}</h5>
+                                    <h5 className="text-secondary">By {dataBooks.author}</h5>
+                                    <p className="text-secondary">{dataBooks.abstract}</p>
+                                </div>
+                                {/* <Link to="/books/" className="btn btn-primary w-25 small-text">
                                     Torna alla lista dei film
                                 </Link> */}
-                                </div>
+
                             </div>
                         </div>
                         <section>
                             <div className="d-flex justify-content-between">
-                                <h3>Recensioni:</h3>
-                                <h3>
+                                <h3 className="d-none d-md-block">Recensioni:</h3>
+                                <h3 className="w-100 text-center text-md-end">
                                     Media voto: <Star num={dataBooks.vote_average} />
                                 </h3>
                             </div>
