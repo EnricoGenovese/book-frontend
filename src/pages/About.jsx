@@ -5,7 +5,9 @@ import style from "./About.module.css"
 export default function About() {
     return (
         <section className="container">
-            <h1>Il nostro team: </h1>
+            <div className={`my-3 ${style.category}`}>
+                <h1>Il nostro team</h1>
+            </div>
             <div className="row">
                 {team.map((member) => (
                     <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-between my-3 ">

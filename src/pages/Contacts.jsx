@@ -3,7 +3,9 @@ import style from "./Contacts.module.css"
 export default function Contacts() {
     return (
         <section className="container text-center">
-            <h1>Contattaci su questi canali</h1>
+            <div className={`my-3 ${style.category}`}>
+                <h1>Contattaci su questi canali</h1>
+            </div>
             <div className="d-flex justify-content-between">
                 <div className="row">
                     <div className="my-5 col-12 col-md-6 col-lg-4">
