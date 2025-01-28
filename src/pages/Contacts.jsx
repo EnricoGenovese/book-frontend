@@ -38,7 +38,7 @@ export default function Contacts() {
                         </div>
                     </div>
                     <div className="my-5 col-12 col-md-6 col-lg-4">
-                        <div className={`py-3 ${style.category}`}>
+                        <div className={`my-3 ${style.category}`}>
                             <h2>Propaganda</h2>
                             <p>Promedi S.r.l.</p>
                             <p>Piazza Malpighi, 6</p>

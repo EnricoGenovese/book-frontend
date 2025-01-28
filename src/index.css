@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+.card-img-details {
+    width: 25%;
+}
+
 
 
 /*
@@ -219,6 +223,7 @@ body {
 
 /* FINE MEDIA QUERY PER L'HOMEPAGE */
 
+
 /* Importazione font da Google Fonts */
 
 /* Stile generale del corpo */
@@ -312,3 +317,85 @@ blockquote {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+/* MEDIA QUERY PER L'HOMEPAGE */
+@media screen and (max-width: 1610px) {
+    #homepage-text {
+        top: 19%;
+        max-width: 350px;
+    }
+
+    #homepage-p {
+        top: 10%;
+        font-size: 19px;
+        max-width: 300px
+    }
+
+
+}
+
+@media screen and (max-width: 1400px) {
+    #homepage-text {
+        top: 10%;
+        font-size: 24px;
+        max-width: 300px
+    }
+
+    #homepage-p {
+        top: 5%;
+        font-size: 19px;
+        max-width: 300px
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    #homepage-text {
+        top: 5%;
+        font-size: 20px;
+        max-width: 200px
+    }
+
+    #homepage-p {
+        top: -5%;
+        left: 49%;
+        font-size: 16px;
+        max-width: 200px
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #homepage-text {
+        top: 1%;
+        left: 60%;
+        font-size: 14px;
+        max-width: 150px
+    }
+
+    #homepage-p {
+        left: 56%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* #homepage-text {
+        display: none;
+    }
+
+    #homepage-p {
+        display: none;
+    } */
+
+    .card-img-details {
+        width: 50%;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .card-img-details {
+        width: 75%;
+    }
+}
+
+/* FINE MEDIA QUERY PER L'HOMEPAGE */
