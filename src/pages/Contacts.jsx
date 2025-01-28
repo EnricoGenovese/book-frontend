@@ -1,31 +1,33 @@
+import style from "./Contacts.module.css"
+
 export default function Contacts() {
     return (
-        <section className="container">
+        <section className="container text-center">
             <h1>Contattaci su questi canali</h1>
-            <div className="d-flex justify-content-around">
-                <div className="row justify-content-center w-100">
+            <div className="d-flex justify-content-between">
+                <div className="row">
                     <div className="my-5 col-12 col-md-6 col-lg-4">
-                        <div className="my-3">
+                        <div className={`my-3 ${style.category}`}>
                             <h2>Via Enzo ed Elvira Sellerio 50, 90141 Palermo - Italia</h2>
                             <p>Tel. (+39) 091.625.4194</p>
                             <p>Fax. (+39) 091.625.5737</p>
                             <p>info@sellerio.it</p>
                         </div>
-                        <div className="my-3">
+                        <div className={`my-3 ${style.category}`}>
                             <h4>Ufficio Commerciale</h4>
                             <p>commerciale@sellerio.it</p>
                         </div>
-                        <div className="my-3">
+                        <div className={`my-3 ${style.category}`}>
                             <h4>Ufficio diritti</h4>
                             <p>rights@sellerio.it</p>
                         </div>
-                        <div className="my-3">
+                        <div className={`my-3 ${style.category}`}>
                             <h4>Ufficio stampa</h4>
                             <p>ufficiostampa@sellerio.it</p>
                         </div>
                     </div>
                     <div className="my-5 col-12 col-md-6 col-lg-4">
-                        <div className="my-3">
+                        <div className={`my-3 ${style.category}`}>
                             <h2>Distribuzione</h2>
                             <p>Messaggerie Libri S.p.A.</p>
                             <p>Via Verdi, 8</p>
@@ -36,7 +38,7 @@ export default function Contacts() {
                         </div>
                     </div>
                     <div className="my-5 col-12 col-md-6 col-lg-4">
-                        <div className="my-3">
+                        <div className={`py-3 ${style.category}`}>
                             <h2>Propaganda</h2>
                             <p>Promedi S.r.l.</p>
                             <p>Piazza Malpighi, 6</p>
@@ -47,6 +49,6 @@ export default function Contacts() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
