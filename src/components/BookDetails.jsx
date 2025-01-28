@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Star from "./Star";
+// Importo il GlobalContext per poter accedere alla variabile di stato  isLoading
+import { useGlobalContext } from "../contexts/GlobalContext.jsx";
+// Importo il componente Loader:
 import Loader from "./Loader";
 // Importo il CSS Modules di BooksDetails
 import style from "./BookDetails.module.css"
@@ -11,6 +14,7 @@ import ReviewForm from "./ReviewForm";
 
 export default function BookDetails({ dataBooks }) {
     const { id } = useParams();     //Destrutturo useParames e ricavo l'id
+    const { isLoading } = useGlobalContext();   // Destrutturo per ricavarmi la variabile di stato isLoading
     console.log("dataBooks: ", dataBooks);
 
     const imgPath = "http://localhost:3000/img/";
@@ -50,7 +54,7 @@ export default function BookDetails({ dataBooks }) {
                         <ReviewForm book_id={id} />
                     </section>
                 </>
-                : <Loader />
+                : isLoading && <Loader/>
             }
         </>
     );
