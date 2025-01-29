@@ -31,7 +31,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 to="/books"
-                                className="nav-link text-decoration-none"
+                                className="nav-link text-decoration-none navlink-hover"
                                 style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
@@ -41,7 +41,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <NavLink
                                 to="/about"
-                                className="nav-link text-decoration-none"
+                                className="nav-link text-decoration-none navlink-hover"
                                 style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
@@ -51,7 +51,7 @@ export default function Navbar() {
                         <li className="nav-item ">
                             <NavLink
                                 to="/contacts"
-                                className="nav-link text-decoration-none"
+                                className="nav-link text-decoration-none navlink-hover"
                                 style={({ isActive }) => (isActive ? { color: "#c6a664" } : {})}
                                 end
                             >
