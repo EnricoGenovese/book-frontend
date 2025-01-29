@@ -12,7 +12,6 @@ export default function BookDetails({ dataBooks }) {
     const { isLoading } = useGlobalContext();   // Destrutturo per ricavarmi la variabile di stato isLoading
     const imgPath = "http://localhost:3000/img/";
 
-
     console.log("dataBooks: ", dataBooks);
     return (
         <>
@@ -36,12 +35,13 @@ export default function BookDetails({ dataBooks }) {
                         </div>
                         <section>
                             <div className="d-flex justify-content-between">
-                                {dataBooks.reviews.lenght > 0 ? <h3 className="d-none d-md-block">Recensioni:</h3> : ""}
+                                {console.log("BUBBA" + dataBooks)}
+                                {dataBooks?.reviews.length > 0 ? <h3 className="d-none d-md-block">Recensioni:</h3> : ""}
                                 <h3 className="w-100 text-center text-md-end">
                                     Media voto: <Star num={dataBooks.vote_average} />
                                 </h3>
                             </div>
-                            {dataBooks.reviews.lenght > 0 ? dataBooks.reviews.map((review, index) => (
+                            {dataBooks?.reviews.length > 0 ? dataBooks.reviews.map((review, index) => (
                                 <div key={review.id}>
                                     <div className={`card d-flex flex-column mb-3 ${index % 2 === 0 && "bg-secondary-subtle"}`}>
                                         <div className="card-body">
