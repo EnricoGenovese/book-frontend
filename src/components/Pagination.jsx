@@ -16,12 +16,12 @@ export default function Pagination() {
                 </li>
                 {new Array(numPages).fill("").map((num, index) => (
                     <li
-                        className={`page-item  ${page === index + 1 ? "" : `${style.dark}`} `}
+                        className={`page-item  ${page === index + 1 ? "" : `${style.dark}`} mx-2 `}
                         aria-current="page"
                         key={index + 1}
                     >
                         <button
-                            className={`page-link ${page === index + 1 ? `${style.active}` : ""}`}
+                            className={`page-link ${page === index + 1 ? `${style.active}` : `${style.dark}`} ${style.pageBtn}`}
                             onClick={() => handlePageChange(index + 1)}
                         >
                             {index + 1}
