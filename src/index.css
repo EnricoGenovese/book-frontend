@@ -12,7 +12,9 @@
     background-color: #c6a664;
 }
 
-
+.navlink-hover:hover{
+    color:#c6a664;
+}
 
 .center-cards {
     margin: 0 auto;

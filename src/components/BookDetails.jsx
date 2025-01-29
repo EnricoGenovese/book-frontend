@@ -41,9 +41,9 @@ export default function BookDetails({ dataBooks }) {
                                     Media voto: <Star num={dataBooks.vote_average} />
                                 </h3>
                             </div>
-                            {dataBooks.reviews.map((review) => (
+                            {dataBooks.reviews.map((review, index) => (
                                 <div key={review.id}>
-                                    <div className={"card d-flex flex-column mb-3"}>
+                                    <div className={`card d-flex flex-column mb-3 ${index% 2 === 0 && "bg-secondary-subtle"}`}>
                                         <div className="card-body">
                                             <p className="card-text">{review.text}</p>
                                             <h5 className="card-title">
