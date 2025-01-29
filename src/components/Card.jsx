@@ -15,7 +15,7 @@ function Card({ data }) {
                 <div className="card-body card-description h-100">
                     <h3 className="card-title fw-bolder">{title}</h3>
                     <h5 className="card-title fw-bold"><span className=" fw-light fst-italic">By &nbsp; </span>{author}</h5>
-                    <p className="card-text">{abstract}</p>
+                    <p className="card-text truncate-text">{abstract}</p>
                     <Link to={`/books/${id}`} className="btn text-decoration-none" style={{ backgroundColor: "#c6a664" }}>Dettagli</Link>
                 </div>
             </div>
