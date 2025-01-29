@@ -29,7 +29,7 @@
 
 .card-hover {
     transform: scale(1);
-    transition: all .2s ease-in-out;
+    transition: all 0.5 ease-in-out;
 }
 
 .card-hover:hover {
@@ -147,6 +147,10 @@ footer {
 
 }
 
+#homepage-p-mobile {
+    display: none;
+}
+
 body {
     background-image: url(/img/sfondo.webp);
     background-size: cover;
@@ -177,7 +181,6 @@ body {
     line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-
 
 /* Importazione font da Google Fonts */
 
@@ -318,28 +321,40 @@ blockquote {
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1040px) {
     #homepage-text {
-        top: 1%;
-        left: 60%;
-        font-size: 14px;
-        max-width: 150px
+        display: none;
     }
 
     #homepage-p {
-        left: 56%;
+        display: none;
+    }
+
+    #homepage-text-mobile {
+        display: block;
+        color: #212529;
+        padding: 10px 3px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 210px;
+        margin-left: 210px;
+        font-size: 20px;
+        /* max-width: 500px; */
+        transform: rotate(9deg);
+    }
+
+    #homepage-p-mobile {
+        display: block;
+        margin-left: 180px;
+        color: #212529;
+        padding: 20px;
+        text-shadow: -1px 1px 2px rgba(43, 10, 10, 0.8);
+        font-size: 16px;
+        max-width: 300px;
+        transform: rotate(9deg);
     }
 }
 
 @media screen and (max-width: 800px) {
-    /* #homepage-text {
-        display: none;
-    }
-
-    #homepage-p {
-        display: none;
-    } */
-
     .card-img-details {
         width: 50%;
     }

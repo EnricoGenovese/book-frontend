@@ -6,6 +6,9 @@ function NotFoundPage() {
         <>
             <h1 id="homepage-text">Errore 404</h1>
             <p className="pt-sm-5" id="homepage-p">Pagina non trovata, torna alla <i><Link to="/">Homepage!</Link></i></p>
+
+            <div><h1 id="homepage-text-mobile">Errore 404</h1>
+                <p className="pt-sm-5" id="homepage-p-mobile">Pagina non trovata, torna alla <i><Link to="/">Homepage!</Link></i></p></div>
         </>
     );
 }
