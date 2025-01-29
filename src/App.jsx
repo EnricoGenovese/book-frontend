@@ -9,6 +9,7 @@ import Contacts from "./pages/Contacts.jsx"
 import Books from "./pages/Books.jsx"
 import Details from "./pages/Details.jsx"
 import NotFoundPage from "./pages/NotFoundPage.jsx"
+import { useNavigate } from "react-router-dom"
 
 function App() {
 

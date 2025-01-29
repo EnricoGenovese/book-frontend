@@ -8,7 +8,7 @@ function Card({ data }) {
     const { title, author, abstract, id } = data;
     return (
         <>
-            <div className="card h-100 position-relative bg-secondary-subtle" id={style.idcards}>
+            <div className="card h-100 position-relative bg-secondary-subtle card-hover" id={style.idcards}>
                 <div>
                     <img className="card-img-top" src={imgPath} alt={title} />
                 </div>

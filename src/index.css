@@ -27,7 +27,14 @@
     width: 25%;
 }
 
+.card-hover{
+    transform: scale(1);
+    transition: all 0.5 ease-in-out;
+}
 
+.card-hover:hover{
+    transform: scale(1.01);
+}
 
 /*
 CARD DETAIL REVIEW
