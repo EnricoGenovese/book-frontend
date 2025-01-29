@@ -10,8 +10,8 @@ export default function About() {
             </div>
             <div className="row">
                 {team.map((member) => (
-                    <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-between my-3 ">
-                        <div className="card bg-secondary-subtle" key={member.id}>
+                    <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-between my-3" key={member.id}>
+                        <div className="card bg-secondary-subtle" >
                             <img src={member.image} className="card-img-top" alt={member.name} />
                             <div className="card-body">
                                 <h4 className="card-title">{member.name}</h4>
