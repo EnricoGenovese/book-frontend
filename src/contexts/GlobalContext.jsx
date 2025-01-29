@@ -10,12 +10,18 @@ const GlobalContext = createContext();  //crea il Context e gli do il nome Globa
 
 // Creo il provider customizzato:
 const GlobalProvider = ({ children }) => {
-    // useState dei book:
     const [books, setBooks] = useState([]);
-    // useState del singolo book:
     const [singleBook, setSingleBook] = useState();
-    // useState del Loader:
     const [isLoading, setIsLoading] = useState(false);
+    const [numPages, setNumPages] = useState(0);
+    const [page, setPage] = useState(1);
+
+    useEffect(getBooks, [page]);
+
+    function handlePageChange(page) {
+        console.log(page);
+        setPage(page);
+    }
 
     /* Configuro lo useEffect per chiamare l'API per i film popolari solo al caricamento della pagina: */
     useEffect(() => {
@@ -24,9 +30,11 @@ const GlobalProvider = ({ children }) => {
 
     function getBooks() {
         setIsLoading(true);     // Attivo il Loader fino all'arrivo dei dati tramite chiamata axios
-        axios.get(apiUrl + "/books")
+        axios.get(apiUrl + "/books", { params: { page } })
             .then((res) => {
-                console.log(res.data.items);
+                console.log(res.data.limit);
+
+                setNumPages(Math.ceil(res.data.count / res.data.limit));
                 setBooks(res.data.items);
             })
             .catch((err) => {
@@ -34,7 +42,7 @@ const GlobalProvider = ({ children }) => {
             })
             .finally(() => {
                 console.log("Finito: ", books);
-                setIsLoading(false);    // Disattivo il Loader dopo l'arrivo dei dati (sia che siano arrivati, sia in caso di errore)
+                setIsLoading(false);
             });
     }
 
@@ -79,6 +87,9 @@ const GlobalProvider = ({ children }) => {
         postReview,
         isLoading,
         setIsLoading,
+        page,
+        numPages,
+        handlePageChange
     }
 
     return (
