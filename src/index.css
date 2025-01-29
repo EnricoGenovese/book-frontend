@@ -29,7 +29,7 @@
 
 .card-hover {
     transform: scale(1);
-    transition: all 0.5 ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .card-hover:hover {
@@ -177,78 +177,6 @@ body {
     line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-/* MEDIA QUERY PER L'HOMEPAGE */
-@media screen and (max-width: 1610px) {
-    #homepage-text {
-        top: 19%;
-        width: 350px;
-    }
-
-    #homepage-p {
-        top: 10%;
-        font-size: 19px;
-        width: 300px
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    #homepage-text {
-        top: 10%;
-        font-size: 24px;
-        width: 300px
-    }
-
-    #homepage-p {
-        top: 5%;
-        font-size: 19px;
-        width: 300px
-    }
-}
-
-@media screen and (max-width: 1099px) {
-    #homepage-text {
-        top: 5%;
-        font-size: 20px;
-        width: 200px
-    }
-
-    #homepage-p {
-        top: -25px;
-        left: 48.5%;
-        font-size: 16px;
-        width: 200px
-    }
-}
-
-@media screen and (max-width: 880px) {
-    #homepage-text {
-        top: 5px;
-        left: 53%;
-        font-size: 14px;
-        width: 150px
-    }
-
-    #homepage-p {
-        top: -10%;
-        left: 49.5%;
-    }
-}
-
-@media screen and (max-width: 790px) {
-    #homepage-text {
-        top: -45px;
-        left: 190px;
-        font-size: 14px;
-        width: 150px
-    }
-
-    #homepage-p {
-        top: -50px;
-        left: 158px;
-    }
-}
-
-/* FINE MEDIA QUERY PER L'HOMEPAGE */
 
 
 /* Importazione font da Google Fonts */
