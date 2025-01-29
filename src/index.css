@@ -12,8 +12,8 @@
     background-color: #c6a664;
 }
 
-.navlink-hover:hover{
-    color:#c6a664;
+.navlink-hover:hover {
+    color: #c6a664;
 }
 
 .center-cards {
@@ -27,12 +27,12 @@
     width: 25%;
 }
 
-.card-hover{
+.card-hover {
     transform: scale(1);
     transition: all 0.5 ease-in-out;
 }
 
-.card-hover:hover{
+.card-hover:hover {
     transform: scale(1.01);
 }
 
@@ -159,6 +159,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Classe sibling per books page */
 .truncate-text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -226,7 +227,7 @@ body {
 }
 
 @media screen and (max-width: 790px) {
-#homepage-text {
+    #homepage-text {
         top: -45px;
         left: 190px;
         font-size: 14px;
