@@ -23,9 +23,9 @@ export default function BookDetails({ dataBooks }) {
                                 <img className="card-img-top card-img-details mb-3 align-self-center " src={imgPath + dataBooks.image} alt={dataBooks.title} />
 
                                 <div className=" d-flex flex-column text-center text-md-start">
-                                    <h5 className="fs-1">{dataBooks.title}</h5>
-                                    <h5 className="text-secondary">By {dataBooks.author}</h5>
-                                    <p className="text-secondary">{dataBooks.abstract}</p>
+                                    <h5 className="fs-1 fw-bold">{dataBooks.title}</h5>
+                                    <h5 className="text-secondary">By &nbsp;&nbsp;&nbsp;<span className="text-black fw-bold text-decoration-underline">{dataBooks.author}</span></h5>
+                                    <p className="text-secondary fw-bold">{dataBooks.abstract}</p>
                                 </div>
                                 {/* <Link to="/books/" className="btn btn-primary w-25 small-text">
                                     Torna alla lista dei film
