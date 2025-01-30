@@ -9,13 +9,14 @@ import Contacts from "./pages/Contacts.jsx"
 import Books from "./pages/Books.jsx"
 import Details from "./pages/Details.jsx"
 import NotFoundPage from "./pages/NotFoundPage.jsx"
-import { useNavigate } from "react-router-dom"
+
 
 function App() {
 
   return (
-    <GlobalProvider>
-      <BrowserRouter>
+
+    <BrowserRouter>
+      <GlobalProvider>
         <Routes>
           <Route Component={DefaultLayout} >
             <Route path="/" Component={HomePage} />
@@ -29,8 +30,9 @@ function App() {
             <Route path="*" Component={NotFoundPage} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </GlobalProvider>
+      </GlobalProvider>
+    </BrowserRouter>
+
   )
 }
 

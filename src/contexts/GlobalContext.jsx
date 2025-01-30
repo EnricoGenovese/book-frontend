@@ -1,7 +1,7 @@
 // Creazione della GlobalContext che conterrà tutte le chiamate API al server
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import NotFoundPage from "../pages/NotFoundPage";
+import { useNavigate } from "react-router-dom";
 //Api url e endpoint per axios
 const apiUrl = import.meta.env.VITE_APIURL;
 const endpoint = "/books/"
@@ -15,7 +15,7 @@ const GlobalProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [numPages, setNumPages] = useState(0);
     const [page, setPage] = useState(1);
-
+    const navigate = useNavigate();
     useEffect(getBooks, [page]);
 
     function handlePageChange(page) {
@@ -38,7 +38,8 @@ const GlobalProvider = ({ children }) => {
                 setBooks(res.data.items);
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err)
+
             })
             .finally(() => {
                 console.log("Finito: ", books);
@@ -55,6 +56,11 @@ const GlobalProvider = ({ children }) => {
             })
             .catch((err) => {
                 console.log(err);
+                if (err.status === 404) {
+                    console.log("error")
+                    navigate("/notFound")
+
+                }
             })
             .finally(() => {
                 console.log("Finito libri");
